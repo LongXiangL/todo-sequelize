@@ -7,6 +7,11 @@ const routes = require('./routes')
 const session = require('express-session')
 const usePassport = require('./config/passport')
 usePassport(app)
+app.use((req, res, next) => {
+  res.locals.isAuthenticated = req.isAuthenticated()
+  res.locals.user = req.user
+  next()
+})
 
 
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
