@@ -1,4 +1,5 @@
 const express = require('express')
+const session = require('express-session')
 const exphbs = require('express-handlebars')
 const methodOverride = require('method-override')
 const flash = require('connect-flash')
@@ -9,8 +10,9 @@ if (process.env.NODE_ENV !== 'production') {
 const app = express()
 const PORT = process.env.PORT || 3000
 const routes = require('./routes')
-const session = require('express-session')
 const usePassport = require('./config/passport')
+
+
 usePassport(app)
 app.use(flash())
 
