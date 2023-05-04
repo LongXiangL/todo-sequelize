@@ -1,6 +1,6 @@
 # 我的餐廳清單
 
-![Index page about Todo List](./public/截圖 2023-05-04 下午11.47.22.png)
+![Index page about Todo List](./public/截圖%202023-05-04%20下午11.47.22.png)
 
 ## 介紹
 
